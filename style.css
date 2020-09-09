@@ -1,0 +1,171 @@
+body{
+    position: relative;
+}
+
+body::before{
+    background-image: url("./image/background.jpg");
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Index style */
+.info-container{
+    position: relative;
+    height: 100%;
+}
+
+.info{
+    color : black;
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    -webkit-animation:mymove 2s;
+}
+
+@-webkit-keyframes mymove{
+    0%   {top:0%;}
+    50%  {top:60%;}
+    100% {top:50%;}
+}
+
+.info img{
+    display: inline-block;
+    border-radius: 50%;
+    width: 25%;
+    height: 40%;
+    border: 2px solid black;
+    transition: width 1s, height 1s;
+}
+
+.info img:hover{
+    width: 30%;
+    height: 45%;
+}
+
+.info .person-info{
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    transform: translateY(50%);
+
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-left: 10%;
+    word-wrap: break-word;
+    transition: font-size 2s;
+}
+
+.info .person-info:hover{
+    font-size: 25px;
+}
+
+/* About Me style */
+.aboutme-container{
+    animation-name: showInfo;
+    animation-duration:2s;
+}
+
+@keyframes showInfo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.education{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.education table{
+    width: 100%;
+    align-self: center;
+}
+
+.education table td{
+    padding: 10px;
+}
+
+.intern{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.intern table{
+    width: 100%;
+    align-self: center;
+}
+
+.intern table td{
+    padding: 10px;
+}
+
+.intern table td ul{
+    font-weight: bold;
+}
+
+/* Project Experience style */
+.project-container{
+    animation-name: showProjectInfo;
+    animation-duration:2s;
+}
+
+@keyframes showProjectInfo {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.projectList{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.projectList table{
+    width: 100%;
+    align-self: center;
+}
+
+.projectList table td{
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .info img {
+        width: 15%;
+        height: 20%;
+        transition: width 1s, height 1s;
+    }
+
+    .info img:hover {
+        width: 20%;
+        height: 25%;
+    }
+
+    .info .person-info{
+        font-size: 10px;
+        transition: font-size 2s;
+    }
+
+    .info .person-info:hover {
+        font-size: 13px;
+    }
+}
