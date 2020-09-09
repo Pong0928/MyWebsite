@@ -147,25 +147,3 @@ body::before{
     padding: 10px;
     font-weight: bold;
 }
-
-@media only screen and (max-width: 600px) {
-    .info img {
-        width: 15%;
-        height: 20%;
-        transition: width 1s, height 1s;
-    }
-
-    .info img:hover {
-        width: 20%;
-        height: 25%;
-    }
-
-    .info .person-info{
-        font-size: 10px;
-        transition: font-size 2s;
-    }
-
-    .info .person-info:hover {
-        font-size: 13px;
-    }
-}
