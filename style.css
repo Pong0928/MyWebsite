@@ -25,7 +25,7 @@ body::before{
 .info{
     color : black;
     position: relative;
-    top: 40%;
+    top: 30%;
     left: 15%;
     transform: translateY(-50%);
     -webkit-animation:mymove 2s;
@@ -34,7 +34,7 @@ body::before{
 @-webkit-keyframes mymove{
     0%   {top:0%;}
     50%  {top:60%;}
-    100% {top:40%;}
+    100% {top:30%;}
 }
 
 .info img{
